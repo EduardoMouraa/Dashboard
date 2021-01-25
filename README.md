@@ -11,6 +11,9 @@ Baixar lib's necessárias
 Criar arquivo .env com as seguintes variáveis
 
    ```
+    DEBUG=True
+    HOST='0.0.0.0'
+    
     APP_ID='PUSHER_APP_ID'
     KEY='PUSHER_KEY'
     SECRET='PUSHER_SECRET'
