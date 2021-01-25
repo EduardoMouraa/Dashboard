@@ -1,0 +1,18 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+input {
+    border-radius: 15px;
+    border: 12px;
+}
+
+input:hover, input:focus{
+    border-radius: 5px;
+    border: 12px;
+}

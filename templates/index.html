@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pusher Python Realtime Dashboard</title>
+	<style>
+		html {
+			position: relative;
+			min-height: 100%;
+		}
+
+		body {
+			margin:0; 
+			overflow-x: hidden;
+			width: 100%;
+			background-color:#ffffff!important;		
+
+		}
+		.content {
+
+			width: 100%;
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;			
+
+		}
+		.header {
+			border: 2px solid rgb(255, 255, 255);
+			width: 100%;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			background-color:#343a40!important;
+			justify-content: center;
+			margin-bottom: 30px;
+		}
+		a {
+			padding: 5px;
+			font-size: 24px;
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+		}
+		a:hover {
+			padding: 10px;
+			font-size: 26px;
+			background-color: #464e58!important;
+
+			border-radius: 20px;
+		}
+		.forms {
+			background: #f1f0f0;
+			width: 40%;
+			height: 33%;
+
+			border: 2px solid rgb(0, 0, 0);
+			margin-bottom: 10px;
+
+		}
+		textarea {
+			border: 1px solid rgb(0, 0, 0);
+			border-radius: 3px;
+			margin-bottom: 10px;
+			font-size: 18px;
+
+			height: 25px;
+			width: 60%;
+			height: 50px;
+			resize: none;
+		}
+
+		input {
+			border: 1px solid rgb(0, 0, 0);
+			border-radius: 3px;
+			margin-bottom: 10px;
+			font-size: 18px;
+			height: 25px;
+			width: 50%;
+			place-content:inherit;
+			padding: 8px;
+
+		}
+		h2 {
+			text-align: center;
+		}
+
+		input[type=submit] {
+			border: 2px solid rgb(0, 0, 0);
+			border-radius: 3px;
+			margin-bottom: 10px;
+			font-size: 18px;
+			height: 50px;
+			width: 100px;
+			padding: 4px;
+			box-shadow: #074085;
+			cursor: pointer;
+		}
+	</style>
+	
+</head>
+<body>
+	
+	<div class="content">
+		<div class="header">
+			<a href="/dashboard">Dashboard</a>
+			<a href="#">Sair</a>
+		</div>
+		{% if data.aviso %}
+		<h4>{{data.aviso}}</h4>
+		{% endif %}
+		<!-- Add to orders -->
+		<form class="forms" method="post" action="/orders">
+			<h2>Faça um novo pedido</h2>
+			<input type="number" name="units" placeholder="Unidade" id="unit" required><br>
+			<input type="date" name="month" placeholder="Mês" id="month" required><br>
+
+			<input type="submit" name="Submit">
+		</form>
+		
+
+		<!-- Add to revenues -->
+		<form class="forms" method="post" action="/message">
+			<h2>Envie uma nova mensagem</h2>
+			<input type="text" name="name" placeholder="Nome" required><br>
+			<textarea name="message" placeholder="Mensagem" required></textarea><br>
+			<input type="submit" name="Submit">
+		</form>
+
+		<!-- Add to message -->
+		<form class="forms" method="post" action="/customer">
+			<h2>Adicionar novo cliente</h2>
+			<input type="text" name="name" placeholder="Nome" required><br>
+			<input type="text" name="position" placeholder="Posição" required><br>
+			<input type="text" name="office" placeholder="Cargo" required><br>
+			<input type="number" name="age" placeholder="Idade" required><br>
+			<input type="text" name="salary" placeholder="Salário" required><br>
+			<input type="submit" name="Submit">
+		</form>
+	</div>
+</body>
+</html>
