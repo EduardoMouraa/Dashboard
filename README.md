@@ -21,7 +21,7 @@ Criar arquivo .env com as seguintes variáveis
    ```
 
  # Docker-compose
- para uma visualização rápida, baixar docker-compose e executar o seguinte comando:
+ para uma visualização rápida, baixar docker-compose e executar o seguinte comando
     
    ```
     docker-compose up
