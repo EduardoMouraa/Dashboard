@@ -2,12 +2,6 @@
 Dashboard com Flask e Pusher
 
 # Pré-requisitos
-Baixar lib's necessárias
-
-   ```
-    pip install -r requirements.txt
-   ```
-
 Criar arquivo .env com as seguintes variáveis
 
    ```
